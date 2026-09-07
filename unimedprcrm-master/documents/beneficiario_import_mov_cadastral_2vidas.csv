@@ -1,0 +1,13 @@
+nome;CPF;tipo;tipoDependencia;grauDependencia;titularCPF;numeroMatricula;dataAdmissaoEmpresa;dataNascimento;sexo;raca;estadoCivil;nomeMae;nomePai;CNS;CBO;recemNato;numeroDeclaracaoNascidoVivo;tipoDocumento;documentoIdentificacao;orgaoExpedidor;orgaoExpedidorUF;dataExpedicao;naturalidadeCidade;naturalidadeEstado;cnhValidade;cnhCategoria;pisPasepNit;tituloEleitoral;certidaoCasamento;produtoAcessorio;produtoAssistencial;tipoEndereco;correspondencia;cartaoMagnetico;cep;endereco;numero;complemento;bairro;cidade;uf;pais;telefoneResidencial;telefoneComercial;telefoneCelular;dataBaseCarencia;dataVinculoComTitular;dataInicioVigencia;contratanteCNPJ;numeroContrato
+PEDRO MIGUEL PIRES;132.580.764-80;titular;normal;0;;8075;25/01/2011;12/07/1960;F;2;casado;BODA REPO;LASABA REPO;749969701810006;;;;;;;;;;;;;;;;1020;5046;residencial;;;80887-162;RUA FOTURATO LOFO;723;AP 46;SAO MIGUEL;CURITIBA;PR;BRASIL;(49) 3947-6744;(49) 3438-1169;(42) 99620-8022;;;03/12/2021;;
+THALES VIEIRA;851.640.239-89;dependente;normal;1;132.580.764-80;6816;24/02/2015;27/03/2009;M;5;casado;GOGA PIPE;DUFOJIMO MADIFA PIPE;138968662810018;;;;;;;;;;;;;;;;1020;5046;residencial;;;82243-784;RUA POFIRABI NIJABOGA NUTUFAJA;236;AP 45;CENTRO CIVICO;CURITIBA;PR;BRASIL;(49) 3361-2654;(47) 3692-1368;(43) 99104-3043;;03/12/2021;03/12/2021;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

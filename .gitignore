@@ -1,0 +1,8 @@
+# Artefatos de execução de testes (Robot Framework / Playwright)
+/log.html
+/output.xml
+/report.html
+.playwright-mcp/
+
+# Cópia local do código-fonte do CRM oficial (repo próprio no Azure DevOps)
+unimedprcrm-master/crm-unimed/

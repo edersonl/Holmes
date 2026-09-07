@@ -1,0 +1,19 @@
+{
+  "name": "unimedpr-crm-playwright",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Testes end-to-end do CRM Unimed PR com Playwright Test e Chromium.",
+  "scripts": {
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "test:e2e:headed": "cross-env HEADLESS=false playwright test",
+    "test:e2e:debug": "cross-env PWDEBUG=1 playwright test",
+    "test:e2e:report": "playwright show-report playwright-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^26.4.1",
+    "cross-env": "^10.0.0",
+    "typescript": "^5.9.0"
+  }
+}
