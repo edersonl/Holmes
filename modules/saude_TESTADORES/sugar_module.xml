@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sugar_module>
+    <name>saude_TESTADORES</name>
+    <version>1.0.0</version>
+    <description>Controle de Testadores Online</description>
+    <author>Unimed - Equipe de Qualidade</author>
+    <type>module</type>
+    <author_email>qualidade@unimed.coop.br</author_email>
+    <published_date>2025-09-03</published_date>
+    <installable>true</installable>
+    <readme></readme>
+    <dependencies>
+        <dependency type="module" version="7.3.1" />
+    </dependencies>
+</sugar_module>

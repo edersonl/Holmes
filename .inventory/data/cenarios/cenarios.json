@@ -1,0 +1,99 @@
+[
+  {
+    "id": "CTR-001-POS",
+    "nome": "Inclusão de Contrato com Todos os Dados",
+    "modulo": "Contratos",
+    "objetivo": "Validar inclusão de contrato com todos os campos obrigatórios preenchidos",
+    "pre_condicoes": [
+      "Usuário autenticado com permissão",
+      "Banco de dados acessível"
+    ],
+    "entradas": [
+      "CPF/CNPJ válido",
+      "Data de início",
+      "Valor do contrato"
+    ],
+    "passos": [
+      "Acessar módulo de Contratos",
+      "Clicar em \"Novo Contrato\"",
+      "Preencher todos os campos obrigatórios",
+      "Salvar"
+    ],
+    "resultado_esperado": "Contrato incluído com sucesso, ID gerado",
+    "evidencias": [
+      "print_tela",
+      "payload_request",
+      "response_success",
+      "db_validacao"
+    ],
+    "dependencias": [],
+    "automation": "automatizado",
+    "prioridade": "alta",
+    "severidade": "alta",
+    "regra_associada": "CTR-R001"
+  },
+  {
+    "id": "CTR-001-NEG",
+    "nome": "Inclusão de Contrato com CPF Inválido",
+    "modulo": "Contratos",
+    "objetivo": "Validar rejeição de contrato com CPF inválido",
+    "pre_condicoes": [
+      "Usuário autenticado"
+    ],
+    "entradas": [
+      "CPF inválido",
+      "Data de início",
+      "Valor do contrato"
+    ],
+    "passos": [
+      "Acessar módulo de Contratos",
+      "Clicar em \"Novo Contrato\"",
+      "Preencher CPF inválido",
+      "Salvar"
+    ],
+    "resultado_esperado": "Mensagem de erro \"CPF inválido\"",
+    "evidencias": [
+      "print_tela",
+      "payload_request",
+      "response_error",
+      "message_validacao"
+    ],
+    "dependencias": [],
+    "automation": "automatizado",
+    "prioridade": "alta",
+    "severidade": "alta",
+    "regra_associada": "CTR-R002"
+  },
+  {
+    "id": "CTR-002-ALT",
+    "nome": "Inclusão de Contrato com Pagamento em DDD",
+    "modulo": "Contratos",
+    "objetivo": "Validar inclusão de contrato com pagamento em DDD (diferente da sedex)",
+    "pre_condicoes": [
+      "Usuário autenticado"
+    ],
+    "entradas": [
+      "CPF válido",
+      "Pagamento: DDD",
+      "Data de início"
+    ],
+    "passos": [
+      "Acessar módulo de Contratos",
+      "Clicar em \"Novo Contrato\"",
+      "Selecionar pagamento em DDD",
+      "Salvar"
+    ],
+    "resultado_esperado": "Contrato incluído com sucesso",
+    "evidencias": [
+      "print_tela",
+      "payload_request",
+      "response_success",
+      "db_validacao"
+    ],
+    "dependencias": [],
+    "automation": "automatizado",
+    "prioridade": "media",
+    "severidade": "media",
+    "regra_associada": "CTR-R003"
+  }
+]

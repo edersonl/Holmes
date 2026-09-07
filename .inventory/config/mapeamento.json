@@ -1,0 +1,113 @@
+{
+  "version": "1.0",
+  "dataCriacao": "2026-09-04",
+  "diretorioProjeto": "C:\\Users\\elima\\OneDrive - Unimed Federação do Parana\\crm-unimed",
+  
+  "modulos": {
+    "contratos": {
+      "descricao": "Gestão de Contratos",
+      "diretorio": "modules/Contratos",
+      "tabelas": ["contratos", "contratos_historico", "contratos_parametros"],
+      "servicos": ["ContratoService", "RenovacaoService", "CancelamentoService"],
+      "apis": ["GET /contratos", "POST /contratos", "PUT /contratos/{id}"],
+      "jobs": ["job_renovacao_contratos", "job_analise_risco"],
+      "filas": ["contratos_renovacao", "contratos_risco"],
+      "relatorios": ["relatorio_contratos_ativos", "relatorio_contratos_vencidos"],
+      "permissoes": ["contrato_visualizar", "contrato_criar", "contrato_alterar", "contrato_cancelar"]
+    },
+    "beneficiarios": {
+      "descricao": "Gestão de Beneficiários",
+      "diretorio": "modules/Beneficiarios",
+      "tabelas": ["beneficiarios", "dependentes", "beneficiarios_historico"],
+      "servicos": ["BeneficiarioService", "DependenteService", "AtivacaoService"],
+      "apis": ["GET /beneficiarios", "POST /beneficiarios", "PUT /beneficiarios/{id}"],
+      "jobs": ["job_validacao_beneficiarios", "job_aniversariantes"],
+      "filas": ["beneficiarios_validacao", "beneficiarios_aniversario"],
+      "relatorios": ["relatorio_beneficiarios_ativos", "relatorio_dependentes"],
+      "permissoes": ["beneficiario_visualizar", "beneficiario_criar", "beneficiario_alterar"]
+    },
+    "movimentacoes": {
+      "descricao": "Movimentações Cadastrais",
+      "diretorio": "modules/Movimentacoes",
+      "tabelas": ["movimentacoes", "movimentacoes_tipo", "movimentacoes_historico"],
+      "servicos": ["MovimentacaoService", "TrasladoService", "SuspensaoService"],
+      "apis": ["GET /movimentacoes", "POST /movimentacoes"],
+      "jobs": ["job_movimentacoes_pendentes", "job_processamento_historico"],
+      "filas": ["movimentacoes_pendentes", "movimentacoes_historico"],
+      "relatorios": ["relatorio_movimentacoes", "relatorio_fluxo_movimentacoes"],
+      "permissoes": ["movimentacao_visualizar", "movimentacao_criar", "movimentacao_aprovar"]
+    },
+    "portabilidade": {
+      "descricao": "Portabilidade de Carências",
+      "diretorio": "modules/Portabilidade",
+      "tabelas": ["portabilidade", "portabilidade_historico", "portabilidade_documentos"],
+      "servicos": ["PortabilidadeService", "AprovacaoService", "RejeicaoService"],
+      "apis": ["GET /portabilidade", "POST /portabilidade"],
+      "jobs": ["job_analise_portabilidade", "job_notificacao_solicitantes"],
+      "filas": ["portabilidade_analise", "portabilidade_notificacao"],
+      "relatorios": ["relatorio_portabilidade_pendentes", "relatorio_portabilidade_aprovadas"],
+      "permissoes": ["portabilidade_visualizar", "portabilidade_solicitar", "portabilidade_aprovar"]
+    },
+    "cartao": {
+      "descricao": "Emissão de Cartão",
+      "diretorio": "modules/Cartao",
+      "tabelas": ["cartoes", "cartoes_solicitacoes", "cartoes_historico"],
+      "servicos": ["CartaoService", "ReemissaoService", "CancelamentoService"],
+      "apis": ["GET /cartoes", "POST /cartoes/solicitacao"],
+      "jobs": ["job_emissao_cartoes", "job_envio_cartoes"],
+      "filas": ["cartoes_emissao", "cartoes_envio"],
+      "relatorios": ["relatorio_cartoes_emitidos", "relatorio_cartoes_pendentes"],
+      "permissoes": ["cartao_visualizar", "cartao_solicitar", "cartao_reemitter"]
+    },
+    "retencao": {
+      "descricao": "Retenção (Adimplente e Inadimplente)",
+      "diretorio": "modules/Retencao",
+      "tabelas": ["retencao", "retencao_inadimplente", "retencao_adimplente"],
+      "servicos": ["RetencaoService", "AcordoService", "DesligamentoService"],
+      "apis": ["GET /retencao", "POST /retencao/acordos"],
+      "jobs": ["job_retention_analise", "job_acordos_pendentes"],
+      "filas": ["retencao_analise", "retencao_acordos"],
+      "relatorios": ["relatorio_retention_inadimplente", "relatorio_retention_adimplente"],
+      "permissoes": ["retencao_visualizar", "retencao_solicitar", "retencao_aprovar"]
+    },
+    "comissionamento": {
+      "descricao": "Comissionamento",
+      "diretorio": "modules/Comissionamento",
+      "tabelas": ["comissionamento", "comissionamento_corretor", "comissionamento_historico"],
+      "servicos": ["ComissionamentoService", "ReprocessamentoService", "AuditoriaService"],
+      "apis": ["GET /comissionamento", "POST /comissionamento/reprocessar"],
+      "jobs": ["job_calculo_comissoes", "job_liquidacao_comissoes"],
+      "filas": ["comissionamento_calculo", "comissionamento_liquidacao"],
+      "relatorios": ["relatorio_comissoes_pendentes", "relatorio_comissoes_liquidadas"],
+      "permissoes": ["comissionamento_visualizar", "comissionamento_reprocessar", "comissionamento_auditar"]
+    }
+  },
+  
+  "integras": {
+    "azure_devops": {
+      "descricao": "Sincronização com Azure Test Plans",
+      "endpoint": "https://dev.azure.com/{org}/{project}",
+      "token_var": "AZURE_DEVOPS_TOKEN",
+      "integracoes": ["testes", "execucoes", "resultados"]
+    },
+    "rabbitmq": {
+      "descricao": "Fila de eventos",
+      "endpoint": "amqp://localhost:5672",
+      "filas": ["contratos_eventos", "beneficiarios_eventos"]
+    },
+    "smtp": {
+      "descricao": "Envio de e-mails",
+      "endpoint": "smtp://smtp.unimedpr.com.br:587"
+    }
+  },
+  
+  "banco": {
+    "tipo": "SQL Server",
+    "servidor": "sqlserver.unimedpr.com.br",
+    "database": "CRM_UNIMED_PR",
+    "tabelas_principais": [
+      "contratos", "beneficiarios", "movimentacoes", "portabilidade",
+      "cartoes", "retencao", "comissionamento", "users", "roles", "permissoes"
+    ]
+  }
+}

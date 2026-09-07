@@ -1,0 +1,430 @@
+{
+  "cobertura": {
+    "Contratos": {
+      "modulo": "Contratos",
+      "cenarios": {
+        "Inclusão": {
+          "categoria": "Inclusão",
+          "ids": [
+            "CTR-001",
+            "CTR-002",
+            "CTR-003"
+          ],
+          "cobertos": [
+            "CTR-001",
+            "CTR-003"
+          ]
+        },
+        "Alteração": {
+          "categoria": "Alteração",
+          "ids": [
+            "CTR-004",
+            "CTR-005"
+          ],
+          "cobertos": [
+            "CTR-004",
+            "CTR-005"
+          ]
+        },
+        "Exclusão": {
+          "categoria": "Exclusão",
+          "ids": [
+            "CTR-006"
+          ],
+          "cobertos": [
+            "CTR-006"
+          ]
+        },
+        "Cancelamento": {
+          "categoria": "Cancelamento",
+          "ids": [
+            "CTR-007",
+            "CTR-008"
+          ],
+          "cobertos": [
+            "CTR-007",
+            "CTR-008"
+          ]
+        },
+        "Reativação": {
+          "categoria": "Reativação",
+          "ids": [
+            "CTR-009"
+          ],
+          "cobertos": [
+            "CTR-009"
+          ]
+        },
+        "Integrações": {
+          "categoria": "Integrações",
+          "ids": [
+            "CTR-INT-001",
+            "CTR-INT-002"
+          ],
+          "cobertos": [
+            "CTR-INT-001",
+            "CTR-INT-002"
+          ]
+        }
+      },
+      "total": 11,
+      "cobertos": 10,
+      "naoCobertos": 1
+    },
+    "Beneficiários": {
+      "modulo": "Beneficiários",
+      "cenarios": {
+        "Inclusão": {
+          "categoria": "Inclusão",
+          "ids": [
+            "BEN-001",
+            "BEN-002",
+            "BEN-003"
+          ],
+          "cobertos": [
+            "BEN-002"
+          ]
+        },
+        "Alteração": {
+          "categoria": "Alteração",
+          "ids": [
+            "BEN-004",
+            "BEN-005"
+          ],
+          "cobertos": [
+            "BEN-004",
+            "BEN-005"
+          ]
+        },
+        "Exclusão": {
+          "categoria": "Exclusão",
+          "ids": [
+            "BEN-006"
+          ],
+          "cobertos": []
+        },
+        "Reativação": {
+          "categoria": "Reativação",
+          "ids": [
+            "BEN-007"
+          ],
+          "cobertos": [
+            "BEN-007"
+          ]
+        },
+        "Dependentes": {
+          "categoria": "Dependentes",
+          "ids": [
+            "BEN-DEP-001",
+            "BEN-DEP-002"
+          ],
+          "cobertos": [
+            "BEN-DEP-002"
+          ]
+        },
+        "Integração": {
+          "categoria": "Integração",
+          "ids": [
+            "BEN-INT-001"
+          ],
+          "cobertos": [
+            "BEN-INT-001"
+          ]
+        }
+      },
+      "total": 10,
+      "cobertos": 6,
+      "naoCobertos": 4
+    },
+    "Movimentações Cadastrais": {
+      "modulo": "Movimentações Cadastrais",
+      "cenarios": {
+        "Todos os fluxos": {
+          "categoria": "Todos os fluxos",
+          "ids": [
+            "MOV-001",
+            "MOV-002",
+            "MOV-003",
+            "MOV-004",
+            "MOV-005"
+          ],
+          "cobertos": [
+            "MOV-003",
+            "MOV-004",
+            "MOV-005"
+          ]
+        },
+        "Fluxos alternativos": {
+          "categoria": "Fluxos alternativos",
+          "ids": [
+            "MOV-ALT-001",
+            "MOV-ALT-002"
+          ],
+          "cobertos": [
+            "MOV-ALT-001"
+          ]
+        },
+        "Fluxos negativos": {
+          "categoria": "Fluxos negativos",
+          "ids": [
+            "MOV-NEG-001",
+            "MOV-NEG-002"
+          ],
+          "cobertos": [
+            "MOV-NEG-001",
+            "MOV-NEG-002"
+          ]
+        },
+        "Fluxos regressivos": {
+          "categoria": "Fluxos regressivos",
+          "ids": [
+            "MOV-REG-001",
+            "MOV-REG-002"
+          ],
+          "cobertos": [
+            "MOV-REG-001",
+            "MOV-REG-002"
+          ]
+        }
+      },
+      "total": 11,
+      "cobertos": 8,
+      "naoCobertos": 3
+    },
+    "Portabilidade": {
+      "modulo": "Portabilidade",
+      "cenarios": {
+        "Solicitação": {
+          "categoria": "Solicitação",
+          "ids": [
+            "POR-001",
+            "POR-002"
+          ],
+          "cobertos": [
+            "POR-001",
+            "POR-002"
+          ]
+        },
+        "Aprovação": {
+          "categoria": "Aprovação",
+          "ids": [
+            "POR-APR-001",
+            "POR-APR-002"
+          ],
+          "cobertos": [
+            "POR-APR-001"
+          ]
+        },
+        "Rejeição": {
+          "categoria": "Rejeição",
+          "ids": [
+            "POR-REJ-001",
+            "POR-REJ-002"
+          ],
+          "cobertos": [
+            "POR-REJ-001",
+            "POR-REJ-002"
+          ]
+        },
+        "Cancelamento": {
+          "categoria": "Cancelamento",
+          "ids": [
+            "POR-CAN-001"
+          ],
+          "cobertos": [
+            "POR-CAN-001"
+          ]
+        },
+        "Integrações": {
+          "categoria": "Integrações",
+          "ids": [
+            "POR-INT-001",
+            "POR-INT-002"
+          ],
+          "cobertos": [
+            "POR-INT-001",
+            "POR-INT-002"
+          ]
+        }
+      },
+      "total": 9,
+      "cobertos": 8,
+      "naoCobertos": 1
+    },
+    "Emissão de Cartão": {
+      "modulo": "Emissão de Cartão",
+      "cenarios": {
+        "Solicitação": {
+          "categoria": "Solicitação",
+          "ids": [
+            "CAR-001",
+            "CAR-002"
+          ],
+          "cobertos": [
+            "CAR-001",
+            "CAR-002"
+          ]
+        },
+        "Reemissão": {
+          "categoria": "Reemissão",
+          "ids": [
+            "CAR-REEM-001",
+            "CAR-REEM-002"
+          ],
+          "cobertos": [
+            "CAR-REEM-001",
+            "CAR-REEM-002"
+          ]
+        },
+        "Cancelamento": {
+          "categoria": "Cancelamento",
+          "ids": [
+            "CAR-CAN-001"
+          ],
+          "cobertos": []
+        },
+        "Integrações": {
+          "categoria": "Integrações",
+          "ids": [
+            "CAR-INT-001",
+            "CAR-INT-002"
+          ],
+          "cobertos": [
+            "CAR-INT-001",
+            "CAR-INT-002"
+          ]
+        }
+      },
+      "total": 7,
+      "cobertos": 6,
+      "naoCobertos": 1
+    },
+    "Retenção Inadimplente": {
+      "modulo": "Retenção Inadimplente",
+      "cenarios": {
+        "Cenários": {
+          "categoria": "Cenários",
+          "ids": [
+            "RET-INAD-001",
+            "RET-INAD-002",
+            "RET-INAD-003",
+            "RET-INAD-004"
+          ],
+          "cobertos": [
+            "RET-INAD-003",
+            "RET-INAD-004"
+          ]
+        }
+      },
+      "total": 4,
+      "cobertos": 2,
+      "naoCobertos": 2
+    },
+    "Retenção Adimplente": {
+      "modulo": "Retenção Adimplente",
+      "cenarios": {
+        "Cenários": {
+          "categoria": "Cenários",
+          "ids": [
+            "RET-ADM-001",
+            "RET-ADM-002",
+            "RET-ADM-003"
+          ],
+          "cobertos": [
+            "RET-ADM-001",
+            "RET-ADM-002"
+          ]
+        }
+      },
+      "total": 3,
+      "cobertos": 2,
+      "naoCobertos": 1
+    },
+    "Comissionamento": {
+      "modulo": "Comissionamento",
+      "cenarios": {
+        "Individual": {
+          "categoria": "Individual",
+          "ids": [
+            "COM-IND-001",
+            "COM-IND-002"
+          ],
+          "cobertos": [
+            "COM-IND-001"
+          ]
+        },
+        "Empresa": {
+          "categoria": "Empresa",
+          "ids": [
+            "COM-EMP-001",
+            "COM-EMP-002"
+          ],
+          "cobertos": [
+            "COM-EMP-001",
+            "COM-EMP-002"
+          ]
+        },
+        "Corretores": {
+          "categoria": "Corretores",
+          "ids": [
+            "COM-COR-001",
+            "COM-COR-002"
+          ],
+          "cobertos": [
+            "COM-COR-001"
+          ]
+        },
+        "Supervisão": {
+          "categoria": "Supervisão",
+          "ids": [
+            "COM-SUP-001",
+            "COM-SUP-002"
+          ],
+          "cobertos": [
+            "COM-SUP-001",
+            "COM-SUP-002"
+          ]
+        },
+        "Auditoria": {
+          "categoria": "Auditoria",
+          "ids": [
+            "COM-AUD-001",
+            "COM-AUD-002"
+          ],
+          "cobertos": [
+            "COM-AUD-001"
+          ]
+        },
+        "Reprocessamento": {
+          "categoria": "Reprocessamento",
+          "ids": [
+            "COM-REP-001",
+            "COM-REP-002"
+          ],
+          "cobertos": [
+            "COM-REP-002"
+          ]
+        },
+        "Integrações": {
+          "categoria": "Integrações",
+          "ids": [
+            "COM-INT-001",
+            "COM-INT-002"
+          ],
+          "cobertos": [
+            "COM-INT-001"
+          ]
+        }
+      },
+      "total": 14,
+      "cobertos": 9,
+      "naoCobertos": 5
+    }
+  },
+  "resumo": {
+    "totalCenarios": 69,
+    "cobertos": 51,
+    "naoCobertos": 18,
+    "coberturaPercentual": 74
+  }
+}

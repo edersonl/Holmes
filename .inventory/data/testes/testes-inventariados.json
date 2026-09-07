@@ -1,0 +1,128 @@
+[
+  {
+    "tipo": "automatizado",
+    "nome": "BUG-134760.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\Bugs\\BUG-134760.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "BUG-137033.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\Bugs\\BUG-137033.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "BUG-137729.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\Bugs\\BUG-137729.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "BUG-137744.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\Bugs\\BUG-137744.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "fluxo-criacao-contrato.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\fluxo-criacao-contrato.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "gfi-ativado.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\GFI\\gfi-ativado.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "gfi-conferencia-integracao.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\GFI\\gfi-conferencia-integracao.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "Beneficiarios.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\Regressao\\Beneficiarios.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "cenario6-codegen.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\Regressao\\cenario6-codegen.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "cenario6-reutilizacao-produto-combinacao.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\Regressao\\cenario6-reutilizacao-produto-combinacao.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "Contratos.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\Regressao\\Contratos.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "criacao-contrato-completo.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\Regressao\\criacao-contrato-completo.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "CRM-Geral.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\Regressao\\CRM-Geral.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  },
+  {
+    "tipo": "automatizado",
+    "nome": "Integracoes.spec.js",
+    "modulo": "geral",
+    "caminho": "tests\\playwright\\tests\\Regressao\\Integracoes.spec.js",
+    "cobertura": "A definir",
+    "origem": "Playwright",
+    "status": "existente"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "regra": {
+      "id": "R001",
+      "nome": "Validação de CPF",
+      "ea_arquivo": "EA/Regras/Negocio/ValidacaoCPF.png",
+      "code_file": "modules/Beneficiarios/service/ValidacaoService.php",
+      "code_method": "validarCPF()",
+      "banco": "beneficiarios.cpf",
+      "integracao": "API/ValidaCPF",
+      "resultado": "true/false"
+    },
+    "cod_existe": false,
+    "status": "NÃO CONFORME",
+    "justificativa": "Arquivo modules/Beneficiarios/service/ValidacaoService.php não encontrado"
+  },
+  {
+    "regra": {
+      "id": "R002",
+      "nome": "Cálculo de Comissão",
+      "ea_arquivo": "EA/Regras/Negocio/CalculoComissao.png",
+      "code_file": "modules/Comissionamento/service/ComissaoService.php",
+      "code_method": "calcularComissao()",
+      "banco": "comissionamento.valores",
+      "integracao": "API/CalculaComissao",
+      "resultado": "valor_monetário"
+    },
+    "cod_existe": false,
+    "status": "NÃO CONFORME",
+    "justificativa": "Arquivo modules/Comissionamento/service/ComissaoService.php não encontrado"
+  },
+  {
+    "regra": {
+      "id": "R003",
+      "nome": "Validação de Portabilidade",
+      "ea_arquivo": "EA/Regras/Negocio/ValidacaoPortabilidade.png",
+      "code_file": "modules/Portabilidade/service/ValidacaoService.php",
+      "code_method": "validarPortabilidade()",
+      "banco": "portabilidade.solicitacoes",
+      "integracao": "API/ValidaPortabilidade",
+      "resultado": "aprovado/rejeitado"
+    },
+    "cod_existe": false,
+    "status": "NÃO CONFORME",
+    "justificativa": "Arquivo modules/Portabilidade/service/ValidacaoService.php não encontrado"
+  }
+]

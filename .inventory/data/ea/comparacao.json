@@ -1,0 +1,65 @@
+[
+  {
+    "artefatoEA": {
+      "tipo": "regra_negocio",
+      "id": "R001",
+      "nome": "Validação de Contrato",
+      "alias": "ValidaContrato",
+      "descricao": "Valida campos obrigatórios do contrato",
+      "fonte": "EA",
+      "status": "publicado"
+    },
+    "artefatoCodigo": null,
+    "artefatoTeste": null,
+    "status": "INCONCLUSIVO",
+    "impacto": "Sem evidência",
+    "prioridade": "Média",
+    "evidencias": [
+      "EA: R001 - Validação de Contrato",
+      "Código: NÃO ENCONTRADO",
+      "Teste: NÃO ENCONTRADO"
+    ]
+  },
+  {
+    "artefatoEA": {
+      "tipo": "regra_negocio",
+      "id": "R002",
+      "nome": "Cálculo de Comissão",
+      "alias": "CalculaComissao",
+      "descricao": "Calcula comissão do corretor",
+      "fonte": "EA",
+      "status": "publicado"
+    },
+    "artefatoCodigo": null,
+    "artefatoTeste": null,
+    "status": "INCONCLUSIVO",
+    "impacto": "Sem evidência",
+    "prioridade": "Média",
+    "evidencias": [
+      "EA: R002 - Cálculo de Comissão",
+      "Código: NÃO ENCONTRADO",
+      "Teste: NÃO ENCONTRADO"
+    ]
+  },
+  {
+    "artefatoEA": {
+      "tipo": "regra_negocio",
+      "id": "R003",
+      "nome": "Revisão de Portabilidade",
+      "alias": "RevisaPortabilidade",
+      "descricao": "Revisa solicitação de portabilidade",
+      "fonte": "EA",
+      "status": "publicado"
+    },
+    "artefatoCodigo": null,
+    "artefatoTeste": null,
+    "status": "INCONCLUSIVO",
+    "impacto": "Sem evidência",
+    "prioridade": "Média",
+    "evidencias": [
+      "EA: R003 - Revisão de Portabilidade",
+      "Código: NÃO ENCONTRADO",
+      "Teste: NÃO ENCONTRADO"
+    ]
+  }
+]
