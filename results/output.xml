@@ -1,0 +1,1948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.2 on win32)" generated="20260907 03:59:11.102" rpa="false" schemaversion="4">
+<suite id="s1" name="UnimedPR CRM" source="F:\Info\CRM\Qualidade\Sherlock\UnimedPR_CRM">
+<suite id="s1-s1" name="Unimedprcrm-Master" source="F:\Info\CRM\Qualidade\Sherlock\UnimedPR_CRM\unimedprcrm-master">
+<suite id="s1-s1-s1" name="Tests" source="F:\Info\CRM\Qualidade\Sherlock\UnimedPR_CRM\unimedprcrm-master\Tests">
+<suite id="s1-s1-s1-s1" name="CRM" source="F:\Info\CRM\Qualidade\Sherlock\UnimedPR_CRM\unimedprcrm-master\Tests\CRM">
+<suite id="s1-s1-s1-s1-s1" name="Regressao01PotClienteResMerc" source="F:\Info\CRM\Qualidade\Sherlock\UnimedPR_CRM\unimedprcrm-master\Tests\CRM\Regressao01PotClienteResMerc.robot">
+<kw name="Instancia Variaveis" library="Comum" type="SETUP">
+<arg>01</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20260907 03:59:20.208" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20260907 03:59:20.207" endtime="20260907 03:59:25.811"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20260907 03:59:25.812" endtime="20260907 03:59:25.853"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${arg1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260907 03:59:25.854" level="INFO">01</msg>
+<status status="PASS" starttime="20260907 03:59:25.854" endtime="20260907 03:59:25.855"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '01'</arg>
+<arg>Instanciar Variaveis PotClienteResMerc</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Instanciar Variaveis PotClienteResMerc" library="Massa01PotClienteResMerc">
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTEPF1}</arg>
+<arg>Pessoa Física</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:25.857" endtime="20260907 03:59:25.858"/>
+</kw>
+<kw name="Name" library="FakerLibrary">
+<var>${temp}</var>
+<doc>:example: 'John Doe'</doc>
+<msg timestamp="20260907 03:59:25.859" level="INFO">${temp} = Gael Almeida</msg>
+<status status="PASS" starttime="20260907 03:59:25.858" endtime="20260907 03:59:25.859"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTEPF1}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:25.860" endtime="20260907 03:59:25.860"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${num}</var>
+<arg>random.randint(1, 5000)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260907 03:59:25.862" level="INFO">${num} = 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.861" endtime="20260907 03:59:25.862"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${conta}</var>
+<arg>Conta</arg>
+<arg>${temp}</arg>
+<arg>${num}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20260907 03:59:25.863" level="INFO">${conta} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.862" endtime="20260907 03:59:25.863"/>
+</kw>
+<kw name="Remover Caracteres Especiais" library="Comum">
+<var>${conta}</var>
+<arg>${conta}</arg>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>Pinto</arg>
+<arg>Bento</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.866" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.865" endtime="20260907 03:59:25.867"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>- EI</arg>
+<arg>EI</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.870" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.868" endtime="20260907 03:59:25.870"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>- ME</arg>
+<arg>ME</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.873" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.871" endtime="20260907 03:59:25.874"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>.</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.877" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.875" endtime="20260907 03:59:25.877"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>/</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.881" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.879" endtime="20260907 03:59:25.881"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>-</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.883" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.881" endtime="20260907 03:59:25.883"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.885" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.884" endtime="20260907 03:59:25.886"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>R$</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.888" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.886" endtime="20260907 03:59:25.888"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>[</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.890" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.889" endtime="20260907 03:59:25.890"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>]</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.891" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.890" endtime="20260907 03:59:25.891"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>'</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.893" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.892" endtime="20260907 03:59:25.893"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ç</arg>
+<arg>c</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.894" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.894" endtime="20260907 03:59:25.895"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>á</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.897" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.896" endtime="20260907 03:59:25.897"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>é</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.899" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.897" endtime="20260907 03:59:25.899"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>í</arg>
+<arg>i</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.901" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.900" endtime="20260907 03:59:25.901"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ó</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.902" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.901" endtime="20260907 03:59:25.902"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ú</arg>
+<arg>u</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.903" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.903" endtime="20260907 03:59:25.904"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>â</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.905" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.904" endtime="20260907 03:59:25.905"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ê</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.906" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.906" endtime="20260907 03:59:25.907"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ô</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.908" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.907" endtime="20260907 03:59:25.908"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ã</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.910" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.909" endtime="20260907 03:59:25.910"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>õ</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.912" level="INFO">${arg1} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.910" endtime="20260907 03:59:25.912"/>
+</kw>
+<return>
+<value>${arg1}</value>
+<status status="PASS" starttime="20260907 03:59:25.912" endtime="20260907 03:59:25.913"/>
+</return>
+<msg timestamp="20260907 03:59:25.913" level="INFO">${conta} = Conta Gael Almeida 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.864" endtime="20260907 03:59:25.913"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${conta}</var>
+<arg>${conta}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20260907 03:59:25.915" level="INFO">${conta} = CONTA GAEL ALMEIDA 4315</msg>
+<status status="PASS" starttime="20260907 03:59:25.914" endtime="20260907 03:59:25.915"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTEPF1}</arg>
+<arg>${conta}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:25.916" endtime="20260907 03:59:25.916"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>@{CLIENTEPF1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20260907 03:59:25.918" level="INFO">@{CLIENTEPF1} = [ Pessoa Física | Gael Almeida | CONTA GAEL ALMEIDA 4315 ]</msg>
+<status status="PASS" starttime="20260907 03:59:25.917" endtime="20260907 03:59:25.918"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${CLIENTEPF1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260907 03:59:25.920" level="INFO">['Pessoa Física', 'Gael Almeida', 'CONTA GAEL ALMEIDA 4315']</msg>
+<status status="PASS" starttime="20260907 03:59:25.919" endtime="20260907 03:59:25.920"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTEPF2}</arg>
+<arg>Pessoa Física</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:25.920" endtime="20260907 03:59:25.921"/>
+</kw>
+<kw name="Name" library="FakerLibrary">
+<var>${temp}</var>
+<doc>:example: 'John Doe'</doc>
+<msg timestamp="20260907 03:59:25.922" level="INFO">${temp} = Ágatha da Rocha</msg>
+<status status="PASS" starttime="20260907 03:59:25.921" endtime="20260907 03:59:25.922"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTEPF2}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:25.922" endtime="20260907 03:59:25.923"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${num}</var>
+<arg>random.randint(1, 5000)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260907 03:59:25.924" level="INFO">${num} = 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.924" endtime="20260907 03:59:25.924"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${conta}</var>
+<arg>Conta</arg>
+<arg>${temp}</arg>
+<arg>${num}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20260907 03:59:25.925" level="INFO">${conta} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.925" endtime="20260907 03:59:25.926"/>
+</kw>
+<kw name="Remover Caracteres Especiais" library="Comum">
+<var>${conta}</var>
+<arg>${conta}</arg>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>Pinto</arg>
+<arg>Bento</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.928" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.927" endtime="20260907 03:59:25.928"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>- EI</arg>
+<arg>EI</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.930" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.929" endtime="20260907 03:59:25.930"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>- ME</arg>
+<arg>ME</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.931" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.930" endtime="20260907 03:59:25.931"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>.</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.940" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.932" endtime="20260907 03:59:25.940"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>/</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.942" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.941" endtime="20260907 03:59:25.942"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>-</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.943" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.943" endtime="20260907 03:59:25.944"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.945" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.944" endtime="20260907 03:59:25.945"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>R$</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.946" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.945" endtime="20260907 03:59:25.946"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>[</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.948" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.947" endtime="20260907 03:59:25.948"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>]</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.949" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.948" endtime="20260907 03:59:25.949"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>'</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:25.950" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.950" endtime="20260907 03:59:25.951"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ç</arg>
+<arg>c</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.952" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.951" endtime="20260907 03:59:25.952"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>á</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.953" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.952" endtime="20260907 03:59:25.953"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>é</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.954" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.954" endtime="20260907 03:59:25.954"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>í</arg>
+<arg>i</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.955" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.955" endtime="20260907 03:59:25.956"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ó</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.957" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.956" endtime="20260907 03:59:25.957"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ú</arg>
+<arg>u</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.958" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.957" endtime="20260907 03:59:25.958"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>â</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.960" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.959" endtime="20260907 03:59:25.960"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ê</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.962" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.960" endtime="20260907 03:59:25.962"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ô</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.963" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.962" endtime="20260907 03:59:25.964"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ã</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.965" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.964" endtime="20260907 03:59:25.965"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>õ</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:25.966" level="INFO">${arg1} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.965" endtime="20260907 03:59:25.966"/>
+</kw>
+<return>
+<value>${arg1}</value>
+<status status="PASS" starttime="20260907 03:59:25.967" endtime="20260907 03:59:25.967"/>
+</return>
+<msg timestamp="20260907 03:59:25.967" level="INFO">${conta} = Conta Ágatha da Rocha 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.926" endtime="20260907 03:59:25.967"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${conta}</var>
+<arg>${conta}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20260907 03:59:25.969" level="INFO">${conta} = CONTA ÁGATHA DA ROCHA 3358</msg>
+<status status="PASS" starttime="20260907 03:59:25.968" endtime="20260907 03:59:25.969"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTEPF2}</arg>
+<arg>${conta}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:25.970" endtime="20260907 03:59:25.970"/>
+</kw>
+<kw name="Cpf" library="FakerLibrary">
+<var>${temp}</var>
+<msg timestamp="20260907 03:59:25.972" level="INFO">${temp} = 853.176.204-90</msg>
+<status status="PASS" starttime="20260907 03:59:25.971" endtime="20260907 03:59:25.979"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTEPF2}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:25.980" endtime="20260907 03:59:25.981"/>
+</kw>
+<kw name="Numerify" library="FakerLibrary">
+<var>${temp}</var>
+<arg>text=#</arg>
+<doc>Generate a string with each placeholder in ``text`` replaced according
+to the following rules:</doc>
+<msg timestamp="20260907 03:59:25.982" level="INFO">${temp} = 9</msg>
+<status status="PASS" starttime="20260907 03:59:25.981" endtime="20260907 03:59:25.983"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTEPF2}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:25.984" endtime="20260907 03:59:25.985"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${temp}</var>
+<msg timestamp="20260907 03:59:25.986" level="INFO">${temp} = mariana85@example.net</msg>
+<status status="PASS" starttime="20260907 03:59:25.985" endtime="20260907 03:59:25.986"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTEPF2}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:25.986" endtime="20260907 03:59:25.987"/>
+</kw>
+<kw name="Phone Number" library="FakerLibrary">
+<var>${temp}</var>
+<msg timestamp="20260907 03:59:25.988" level="INFO">${temp} = 82 0938-4054</msg>
+<status status="PASS" starttime="20260907 03:59:25.987" endtime="20260907 03:59:25.988"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTEPF2}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:25.988" endtime="20260907 03:59:25.989"/>
+</kw>
+<kw name="Cellphone Number" library="FakerLibrary">
+<var>${temp}</var>
+<msg timestamp="20260907 03:59:25.991" level="INFO">${temp} = 71 98040-3796</msg>
+<status status="PASS" starttime="20260907 03:59:25.990" endtime="20260907 03:59:25.991"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTEPF2}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:25.992" endtime="20260907 03:59:25.993"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>@{CLIENTEPF2}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20260907 03:59:25.994" level="INFO">@{CLIENTEPF2} = [ Pessoa Física | Ágatha da Rocha | CONTA ÁGATHA DA ROCHA 3358 | 853.176.204-90 | 9 | mariana85@example.net | 82 0938-4054 | 71 98040-3796 ]</msg>
+<status status="PASS" starttime="20260907 03:59:25.993" endtime="20260907 03:59:25.994"/>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<arg>@{CLIENTEPF2}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20260907 03:59:25.996" level="INFO">Pessoa Física</msg>
+<msg timestamp="20260907 03:59:25.996" level="INFO">Ágatha da Rocha</msg>
+<msg timestamp="20260907 03:59:25.996" level="INFO">CONTA ÁGATHA DA ROCHA 3358</msg>
+<msg timestamp="20260907 03:59:25.996" level="INFO">853.176.204-90</msg>
+<msg timestamp="20260907 03:59:25.997" level="INFO">9</msg>
+<msg timestamp="20260907 03:59:25.997" level="INFO">mariana85@example.net</msg>
+<msg timestamp="20260907 03:59:25.997" level="INFO">82 0938-4054</msg>
+<msg timestamp="20260907 03:59:25.997" level="INFO">71 98040-3796</msg>
+<status status="PASS" starttime="20260907 03:59:25.995" endtime="20260907 03:59:25.997"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ3}</arg>
+<arg>Pessoa Jurídica (CNPJ)</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:25.998" endtime="20260907 03:59:25.999"/>
+</kw>
+<kw name="Company" library="FakerLibrary">
+<var>${temp}</var>
+<doc>:example: 'Acme Ltd'</doc>
+<msg timestamp="20260907 03:59:26.000" level="INFO">${temp} = Alves Aparecida S.A.</msg>
+<status status="PASS" starttime="20260907 03:59:25.999" endtime="20260907 03:59:26.000"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ3}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.001" endtime="20260907 03:59:26.001"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${num}</var>
+<arg>random.randint(1, 5000)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260907 03:59:26.002" level="INFO">${num} = 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.002" endtime="20260907 03:59:26.002"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${conta}</var>
+<arg>Conta</arg>
+<arg>${temp}</arg>
+<arg>${num}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20260907 03:59:26.004" level="INFO">${conta} = Conta Alves Aparecida S.A. 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.003" endtime="20260907 03:59:26.004"/>
+</kw>
+<kw name="Remover Caracteres Especiais" library="Comum">
+<var>${conta}</var>
+<arg>${conta}</arg>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>Pinto</arg>
+<arg>Bento</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.007" level="INFO">${arg1} = Conta Alves Aparecida S.A. 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.006" endtime="20260907 03:59:26.007"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>- EI</arg>
+<arg>EI</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.008" level="INFO">${arg1} = Conta Alves Aparecida S.A. 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.007" endtime="20260907 03:59:26.008"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>- ME</arg>
+<arg>ME</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.010" level="INFO">${arg1} = Conta Alves Aparecida S.A. 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.009" endtime="20260907 03:59:26.010"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>.</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.011" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.010" endtime="20260907 03:59:26.011"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>/</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.013" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.012" endtime="20260907 03:59:26.013"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>-</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.014" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.013" endtime="20260907 03:59:26.015"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.016" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.015" endtime="20260907 03:59:26.017"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>R$</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.026" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.017" endtime="20260907 03:59:26.026"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>[</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.029" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.027" endtime="20260907 03:59:26.029"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>]</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.031" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.030" endtime="20260907 03:59:26.031"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>'</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.033" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.032" endtime="20260907 03:59:26.033"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ç</arg>
+<arg>c</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.035" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.034" endtime="20260907 03:59:26.035"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>á</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.037" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.036" endtime="20260907 03:59:26.037"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>é</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.039" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.038" endtime="20260907 03:59:26.039"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>í</arg>
+<arg>i</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.041" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.040" endtime="20260907 03:59:26.041"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ó</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.043" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.042" endtime="20260907 03:59:26.043"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ú</arg>
+<arg>u</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.044" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.043" endtime="20260907 03:59:26.044"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>â</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.046" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.045" endtime="20260907 03:59:26.046"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ê</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.047" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.046" endtime="20260907 03:59:26.047"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ô</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.049" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.048" endtime="20260907 03:59:26.049"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ã</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.050" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.049" endtime="20260907 03:59:26.050"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>õ</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.051" level="INFO">${arg1} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.051" endtime="20260907 03:59:26.051"/>
+</kw>
+<return>
+<value>${arg1}</value>
+<status status="PASS" starttime="20260907 03:59:26.052" endtime="20260907 03:59:26.053"/>
+</return>
+<msg timestamp="20260907 03:59:26.053" level="INFO">${conta} = Conta Alves Aparecida SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.005" endtime="20260907 03:59:26.054"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${conta}</var>
+<arg>${conta}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20260907 03:59:26.055" level="INFO">${conta} = CONTA ALVES APARECIDA SA 3765</msg>
+<status status="PASS" starttime="20260907 03:59:26.054" endtime="20260907 03:59:26.055"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ3}</arg>
+<arg>${conta}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.056" endtime="20260907 03:59:26.057"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>@{CLIENTECNPJ3}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20260907 03:59:26.059" level="INFO">@{CLIENTECNPJ3} = [ Pessoa Jurídica (CNPJ) | Alves Aparecida S.A. | CONTA ALVES APARECIDA SA 3765 ]</msg>
+<status status="PASS" starttime="20260907 03:59:26.058" endtime="20260907 03:59:26.059"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${CLIENTECNPJ3}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260907 03:59:26.060" level="INFO">['Pessoa Jurídica (CNPJ)', 'Alves Aparecida S.A.', 'CONTA ALVES APARECIDA SA 3765']</msg>
+<status status="PASS" starttime="20260907 03:59:26.060" endtime="20260907 03:59:26.060"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ4}</arg>
+<arg>Pessoa Jurídica (CNPJ)</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.061" endtime="20260907 03:59:26.061"/>
+</kw>
+<kw name="Company" library="FakerLibrary">
+<var>${temp}</var>
+<doc>:example: 'Acme Ltd'</doc>
+<msg timestamp="20260907 03:59:26.062" level="INFO">${temp} = da Mata</msg>
+<status status="PASS" starttime="20260907 03:59:26.062" endtime="20260907 03:59:26.062"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ4}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.063" endtime="20260907 03:59:26.063"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${num}</var>
+<arg>random.randint(1, 5000)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260907 03:59:26.071" level="INFO">${num} = 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.064" endtime="20260907 03:59:26.071"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${conta}</var>
+<arg>Conta</arg>
+<arg>${temp}</arg>
+<arg>${num}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20260907 03:59:26.072" level="INFO">${conta} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.072" endtime="20260907 03:59:26.073"/>
+</kw>
+<kw name="Remover Caracteres Especiais" library="Comum">
+<var>${conta}</var>
+<arg>${conta}</arg>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>Pinto</arg>
+<arg>Bento</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.074" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.074" endtime="20260907 03:59:26.075"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>- EI</arg>
+<arg>EI</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.075" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.075" endtime="20260907 03:59:26.076"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>- ME</arg>
+<arg>ME</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.077" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.076" endtime="20260907 03:59:26.077"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>.</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.078" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.077" endtime="20260907 03:59:26.078"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>/</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.079" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.078" endtime="20260907 03:59:26.079"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>-</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.080" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.079" endtime="20260907 03:59:26.080"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.081" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.080" endtime="20260907 03:59:26.081"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>R$</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.082" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.082" endtime="20260907 03:59:26.082"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>[</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.084" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.083" endtime="20260907 03:59:26.084"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>]</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.086" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.085" endtime="20260907 03:59:26.086"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>'</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.087" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.086" endtime="20260907 03:59:26.087"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ç</arg>
+<arg>c</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.088" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.087" endtime="20260907 03:59:26.089"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>á</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.090" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.089" endtime="20260907 03:59:26.090"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>é</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.091" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.090" endtime="20260907 03:59:26.091"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>í</arg>
+<arg>i</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.092" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.092" endtime="20260907 03:59:26.093"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ó</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.094" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.093" endtime="20260907 03:59:26.094"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ú</arg>
+<arg>u</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.095" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.094" endtime="20260907 03:59:26.095"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>â</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.096" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.096" endtime="20260907 03:59:26.097"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ê</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.098" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.097" endtime="20260907 03:59:26.098"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ô</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.099" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.098" endtime="20260907 03:59:26.099"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ã</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.108" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.107" endtime="20260907 03:59:26.108"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>õ</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.109" level="INFO">${arg1} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.108" endtime="20260907 03:59:26.109"/>
+</kw>
+<return>
+<value>${arg1}</value>
+<status status="PASS" starttime="20260907 03:59:26.109" endtime="20260907 03:59:26.110"/>
+</return>
+<msg timestamp="20260907 03:59:26.110" level="INFO">${conta} = Conta da Mata 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.073" endtime="20260907 03:59:26.110"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${conta}</var>
+<arg>${conta}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20260907 03:59:26.111" level="INFO">${conta} = CONTA DA MATA 630</msg>
+<status status="PASS" starttime="20260907 03:59:26.111" endtime="20260907 03:59:26.112"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ4}</arg>
+<arg>${conta}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.112" endtime="20260907 03:59:26.113"/>
+</kw>
+<kw name="Cnpj" library="FakerLibrary">
+<var>${temp}</var>
+<doc>source: https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/publicacoes/documentos-tecnicos/cnpj/manual-dv-cnpj.pdf/view  # noqa: E501</doc>
+<msg timestamp="20260907 03:59:26.113" level="INFO">${temp} = 36.791.408/0001-76</msg>
+<status status="PASS" starttime="20260907 03:59:26.113" endtime="20260907 03:59:26.114"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ4}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.114" endtime="20260907 03:59:26.115"/>
+</kw>
+<kw name="Numerify" library="FakerLibrary">
+<var>${temp}</var>
+<arg>text=#</arg>
+<doc>Generate a string with each placeholder in ``text`` replaced according
+to the following rules:</doc>
+<msg timestamp="20260907 03:59:26.116" level="INFO">${temp} = 7</msg>
+<status status="PASS" starttime="20260907 03:59:26.115" endtime="20260907 03:59:26.116"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ4}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.116" endtime="20260907 03:59:26.117"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${temp}</var>
+<msg timestamp="20260907 03:59:26.118" level="INFO">${temp} = da-conceicaomariane@example.org</msg>
+<status status="PASS" starttime="20260907 03:59:26.117" endtime="20260907 03:59:26.118"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ4}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.119" endtime="20260907 03:59:26.119"/>
+</kw>
+<kw name="Phone Number" library="FakerLibrary">
+<var>${temp}</var>
+<msg timestamp="20260907 03:59:26.120" level="INFO">${temp} = 21 8822-2331</msg>
+<status status="PASS" starttime="20260907 03:59:26.120" endtime="20260907 03:59:26.121"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ4}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.121" endtime="20260907 03:59:26.122"/>
+</kw>
+<kw name="Phone Number" library="FakerLibrary">
+<var>${temp}</var>
+<msg timestamp="20260907 03:59:26.122" level="INFO">${temp} = 45 2296-7579</msg>
+<status status="PASS" starttime="20260907 03:59:26.122" endtime="20260907 03:59:26.123"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ4}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.123" endtime="20260907 03:59:26.124"/>
+</kw>
+<kw name="Company" library="FakerLibrary">
+<var>${temp}</var>
+<doc>:example: 'Acme Ltd'</doc>
+<msg timestamp="20260907 03:59:26.124" level="INFO">${temp} = Sampaio Vieira Ltda.</msg>
+<status status="PASS" starttime="20260907 03:59:26.124" endtime="20260907 03:59:26.125"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ4}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.125" endtime="20260907 03:59:26.125"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ4}</arg>
+<arg>ME</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.126" endtime="20260907 03:59:26.126"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ4}</arg>
+<arg>Matriz</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.127" endtime="20260907 03:59:26.127"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECNPJ4}</arg>
+<arg>1015</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.127" endtime="20260907 03:59:26.128"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>@{CLIENTECNPJ4}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20260907 03:59:26.129" level="INFO">@{CLIENTECNPJ4} = [ Pessoa Jurídica (CNPJ) | da Mata | CONTA DA MATA 630 | 36.791.408/0001-76 | 7 | da-conceicaomariane@example.org | 21 8822-2331 | 45 2296-7579 | Sampaio Vieira Ltda. | ME | Matriz | 1015 ]</msg>
+<status status="PASS" starttime="20260907 03:59:26.128" endtime="20260907 03:59:26.129"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECAEPF5}</arg>
+<arg>Pessoa Jurídica (CAEPF)</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.129" endtime="20260907 03:59:26.130"/>
+</kw>
+<kw name="Company" library="FakerLibrary">
+<var>${temp}</var>
+<doc>:example: 'Acme Ltd'</doc>
+<msg timestamp="20260907 03:59:26.130" level="INFO">${temp} = Casa Grande Fonseca e Filhos</msg>
+<status status="PASS" starttime="20260907 03:59:26.130" endtime="20260907 03:59:26.131"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECAEPF5}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.131" endtime="20260907 03:59:26.131"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${num}</var>
+<arg>random.randint(1, 5000)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260907 03:59:26.132" level="INFO">${num} = 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.132" endtime="20260907 03:59:26.132"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${conta}</var>
+<arg>Conta</arg>
+<arg>${temp}</arg>
+<arg>${num}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20260907 03:59:26.133" level="INFO">${conta} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.133" endtime="20260907 03:59:26.133"/>
+</kw>
+<kw name="Remover Caracteres Especiais" library="Comum">
+<var>${conta}</var>
+<arg>${conta}</arg>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>Pinto</arg>
+<arg>Bento</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.136" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.135" endtime="20260907 03:59:26.143"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>- EI</arg>
+<arg>EI</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.145" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.144" endtime="20260907 03:59:26.146"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>- ME</arg>
+<arg>ME</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.148" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.146" endtime="20260907 03:59:26.148"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>.</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.150" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.149" endtime="20260907 03:59:26.150"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>/</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.152" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.151" endtime="20260907 03:59:26.152"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>-</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.154" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.153" endtime="20260907 03:59:26.154"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.155" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.154" endtime="20260907 03:59:26.155"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>R$</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.157" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.156" endtime="20260907 03:59:26.157"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>[</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.158" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.157" endtime="20260907 03:59:26.158"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>]</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.159" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.159" endtime="20260907 03:59:26.159"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>'</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.161" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.160" endtime="20260907 03:59:26.161"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ç</arg>
+<arg>c</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.162" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.161" endtime="20260907 03:59:26.162"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>á</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.163" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.162" endtime="20260907 03:59:26.163"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>é</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.165" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.164" endtime="20260907 03:59:26.165"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>í</arg>
+<arg>i</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.166" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.165" endtime="20260907 03:59:26.166"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ó</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.168" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.167" endtime="20260907 03:59:26.168"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ú</arg>
+<arg>u</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.169" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.168" endtime="20260907 03:59:26.169"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>â</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.170" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.170" endtime="20260907 03:59:26.170"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ê</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.171" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.171" endtime="20260907 03:59:26.172"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ô</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.173" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.172" endtime="20260907 03:59:26.173"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ã</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.174" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.173" endtime="20260907 03:59:26.174"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>õ</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.182" level="INFO">${arg1} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.174" endtime="20260907 03:59:26.182"/>
+</kw>
+<return>
+<value>${arg1}</value>
+<status status="PASS" starttime="20260907 03:59:26.182" endtime="20260907 03:59:26.183"/>
+</return>
+<msg timestamp="20260907 03:59:26.183" level="INFO">${conta} = Conta Casa Grande Fonseca e Filhos 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.134" endtime="20260907 03:59:26.183"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${conta}</var>
+<arg>${conta}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20260907 03:59:26.185" level="INFO">${conta} = CONTA CASA GRANDE FONSECA E FILHOS 3337</msg>
+<status status="PASS" starttime="20260907 03:59:26.184" endtime="20260907 03:59:26.185"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECAEPF5}</arg>
+<arg>${conta}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.186" endtime="20260907 03:59:26.187"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>@{CLIENTECAEPF5}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20260907 03:59:26.188" level="INFO">@{CLIENTECAEPF5} = [ Pessoa Jurídica (CAEPF) | Casa Grande Fonseca e Filhos | CONTA CASA GRANDE FONSECA E FILHOS 3337 ]</msg>
+<status status="PASS" starttime="20260907 03:59:26.187" endtime="20260907 03:59:26.188"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${CLIENTECAEPF5}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20260907 03:59:26.189" level="INFO">['Pessoa Jurídica (CAEPF)', 'Casa Grande Fonseca e Filhos', 'CONTA CASA GRANDE FONSECA E FILHOS 3337']</msg>
+<status status="PASS" starttime="20260907 03:59:26.188" endtime="20260907 03:59:26.189"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECAEPF6}</arg>
+<arg>Pessoa Jurídica (CAEPF)</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.190" endtime="20260907 03:59:26.190"/>
+</kw>
+<kw name="Company" library="FakerLibrary">
+<var>${temp}</var>
+<doc>:example: 'Acme Ltd'</doc>
+<msg timestamp="20260907 03:59:26.191" level="INFO">${temp} = Martins Cardoso S.A.</msg>
+<status status="PASS" starttime="20260907 03:59:26.191" endtime="20260907 03:59:26.192"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECAEPF6}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.192" endtime="20260907 03:59:26.193"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${num}</var>
+<arg>random.randint(1, 5000)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20260907 03:59:26.194" level="INFO">${num} = 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.193" endtime="20260907 03:59:26.194"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${conta}</var>
+<arg>Conta</arg>
+<arg>${temp}</arg>
+<arg>${num}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20260907 03:59:26.195" level="INFO">${conta} = Conta Martins Cardoso S.A. 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.194" endtime="20260907 03:59:26.195"/>
+</kw>
+<kw name="Remover Caracteres Especiais" library="Comum">
+<var>${conta}</var>
+<arg>${conta}</arg>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>Pinto</arg>
+<arg>Bento</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.198" level="INFO">${arg1} = Conta Martins Cardoso S.A. 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.197" endtime="20260907 03:59:26.198"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>- EI</arg>
+<arg>EI</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.200" level="INFO">${arg1} = Conta Martins Cardoso S.A. 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.199" endtime="20260907 03:59:26.200"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>- ME</arg>
+<arg>ME</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.201" level="INFO">${arg1} = Conta Martins Cardoso S.A. 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.200" endtime="20260907 03:59:26.202"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>.</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.203" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.202" endtime="20260907 03:59:26.203"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>/</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.204" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.204" endtime="20260907 03:59:26.205"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>-</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.206" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.205" endtime="20260907 03:59:26.206"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.208" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.207" endtime="20260907 03:59:26.208"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>R$</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.210" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.209" endtime="20260907 03:59:26.210"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>[</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.212" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.211" endtime="20260907 03:59:26.212"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>]</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.213" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.212" endtime="20260907 03:59:26.213"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>'</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20260907 03:59:26.215" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.214" endtime="20260907 03:59:26.215"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ç</arg>
+<arg>c</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.216" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.215" endtime="20260907 03:59:26.216"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>á</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.224" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.217" endtime="20260907 03:59:26.225"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>é</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.226" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.225" endtime="20260907 03:59:26.226"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>í</arg>
+<arg>i</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.228" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.227" endtime="20260907 03:59:26.228"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ó</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.229" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.229" endtime="20260907 03:59:26.230"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ú</arg>
+<arg>u</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.231" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.230" endtime="20260907 03:59:26.231"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>â</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.232" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.231" endtime="20260907 03:59:26.232"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ê</arg>
+<arg>e</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.233" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.232" endtime="20260907 03:59:26.233"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ô</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.234" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.233" endtime="20260907 03:59:26.234"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>ã</arg>
+<arg>a</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.235" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.235" endtime="20260907 03:59:26.235"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${arg1}</var>
+<arg>${arg1}</arg>
+<arg>õ</arg>
+<arg>o</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20260907 03:59:26.237" level="INFO">${arg1} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.236" endtime="20260907 03:59:26.237"/>
+</kw>
+<return>
+<value>${arg1}</value>
+<status status="PASS" starttime="20260907 03:59:26.237" endtime="20260907 03:59:26.237"/>
+</return>
+<msg timestamp="20260907 03:59:26.238" level="INFO">${conta} = Conta Martins Cardoso SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.196" endtime="20260907 03:59:26.238"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${conta}</var>
+<arg>${conta}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20260907 03:59:26.239" level="INFO">${conta} = CONTA MARTINS CARDOSO SA 2168</msg>
+<status status="PASS" starttime="20260907 03:59:26.238" endtime="20260907 03:59:26.239"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECAEPF6}</arg>
+<arg>${conta}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.239" endtime="20260907 03:59:26.240"/>
+</kw>
+<kw name="Gerar CAEPF" library="Comum">
+<var>${temp}</var>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${GERADOR_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20260907 03:59:26.242" level="INFO">Opening url 'http://192.168.1.78/gerador.php'</msg>
+<status status="PASS" starttime="20260907 03:59:26.241" endtime="20260907 03:59:26.288"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//form[4]/input[2]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20260907 03:59:26.292" level="INFO">Clicking button 'xpath=//form[4]/input[2]'.</msg>
+<status status="PASS" starttime="20260907 03:59:26.289" endtime="20260907 03:59:26.354"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${caepf}</var>
+<arg>return document.body.childNodes[0].nodeValue</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20260907 03:59:26.356" level="INFO">Executing JavaScript:
+return document.body.childNodes[0].nodeValue
+Without any arguments.</msg>
+<msg timestamp="20260907 03:59:26.362" level="INFO">${caepf} = 
+</msg>
+<status status="PASS" starttime="20260907 03:59:26.355" endtime="20260907 03:59:26.362"/>
+</kw>
+<return>
+<value>${caepf}</value>
+<status status="PASS" starttime="20260907 03:59:26.362" endtime="20260907 03:59:26.363"/>
+</return>
+<msg timestamp="20260907 03:59:26.363" level="INFO">${temp} = 
+</msg>
+<status status="PASS" starttime="20260907 03:59:26.241" endtime="20260907 03:59:26.364"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECAEPF6}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.364" endtime="20260907 03:59:26.365"/>
+</kw>
+<kw name="Numerify" library="FakerLibrary">
+<var>${temp}</var>
+<arg>text=#</arg>
+<doc>Generate a string with each placeholder in ``text`` replaced according
+to the following rules:</doc>
+<msg timestamp="20260907 03:59:26.367" level="INFO">${temp} = 1</msg>
+<status status="PASS" starttime="20260907 03:59:26.366" endtime="20260907 03:59:26.368"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECAEPF6}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.368" endtime="20260907 03:59:26.369"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${temp}</var>
+<msg timestamp="20260907 03:59:26.371" level="INFO">${temp} = juliaviana@example.com</msg>
+<status status="PASS" starttime="20260907 03:59:26.370" endtime="20260907 03:59:26.371"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECAEPF6}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.371" endtime="20260907 03:59:26.372"/>
+</kw>
+<kw name="Phone Number" library="FakerLibrary">
+<var>${temp}</var>
+<msg timestamp="20260907 03:59:26.373" level="INFO">${temp} = 93 5666-9380</msg>
+<status status="PASS" starttime="20260907 03:59:26.372" endtime="20260907 03:59:26.373"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECAEPF6}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.374" endtime="20260907 03:59:26.382"/>
+</kw>
+<kw name="Phone Number" library="FakerLibrary">
+<var>${temp}</var>
+<msg timestamp="20260907 03:59:26.382" level="INFO">${temp} = 46 8241-5276</msg>
+<status status="PASS" starttime="20260907 03:59:26.382" endtime="20260907 03:59:26.383"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECAEPF6}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.383" endtime="20260907 03:59:26.384"/>
+</kw>
+<kw name="Company" library="FakerLibrary">
+<var>${temp}</var>
+<doc>:example: 'Acme Ltd'</doc>
+<msg timestamp="20260907 03:59:26.385" level="INFO">${temp} = Melo</msg>
+<status status="PASS" starttime="20260907 03:59:26.384" endtime="20260907 03:59:26.385"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${CLIENTECAEPF6}</arg>
+<arg>${temp}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20260907 03:59:26.385" endtime="20260907 03:59:26.386"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>@{CLIENTECAEPF6}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20260907 03:59:26.387" level="INFO">@{CLIENTECAEPF6} = [ Pessoa Jurídica (CAEPF) | Martins Cardoso S.A. | CONTA MARTINS CARDOSO SA 2168 | 
+ | 1 | juliaviana@example.com | 93 5666-9380 | 46 8241-5276 | Melo ]</msg>
+<status status="PASS" starttime="20260907 03:59:26.386" endtime="20260907 03:59:26.387"/>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<arg>${CLIENTECAEPF6}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20260907 03:59:26.388" level="INFO">['Pessoa Jurídica (CAEPF)', 'Martins Cardoso S.A.', 'CONTA MARTINS CARDOSO SA 2168', '\n', '1', 'juliaviana@example.com', '93 5666-9380', '46 8241-5276', 'Melo']</msg>
+<status status="PASS" starttime="20260907 03:59:26.387" endtime="20260907 03:59:26.388"/>
+</kw>
+<status status="PASS" starttime="20260907 03:59:25.856" endtime="20260907 03:59:26.389"/>
+</kw>
+<status status="PASS" starttime="20260907 03:59:25.855" endtime="20260907 03:59:26.389"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '02'</arg>
+<arg>Instanciar Variaveis Conta</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.389" endtime="20260907 03:59:26.390"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '03'</arg>
+<arg>Instanciar Variaveis Oportunidades</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.390" endtime="20260907 03:59:26.391"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '04'</arg>
+<arg>Instanciar Variaveis Cotacao</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.391" endtime="20260907 03:59:26.392"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '05'</arg>
+<arg>Instanciar Variaveis Portabilidade</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.392" endtime="20260907 03:59:26.393"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '06'</arg>
+<arg>Instanciar Variaveis Beneficiário</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.393" endtime="20260907 03:59:26.394"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '07'</arg>
+<arg>Instanciar Variaveis Dec de Saude</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.394" endtime="20260907 03:59:26.394"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '08'</arg>
+<arg>Instanciar Variaveis Contrato</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.395" endtime="20260907 03:59:26.396"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '09'</arg>
+<arg>Instanciar Variaveis Integracao</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.396" endtime="20260907 03:59:26.397"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '10'</arg>
+<arg>Instanciar Variaveis IntegMovExclusaoCRM</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.397" endtime="20260907 03:59:26.398"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '11'</arg>
+<arg>Instanciar Variaveis IntegMovExclusaoRN412CRM</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.398" endtime="20260907 03:59:26.399"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '12'</arg>
+<arg>Instanciar Variaveis IntegMovMudancaProdCRM</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.399" endtime="20260907 03:59:26.399"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '13'</arg>
+<arg>Instanciar Variaveis IntegMovTransfGrupFamilCRM</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.400" endtime="20260907 03:59:26.400"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '14'</arg>
+<arg>Instanciar Variaveis IntegMovCancelamContratoCRM</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.401" endtime="20260907 03:59:26.401"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '15'</arg>
+<arg>Instanciar Variaveis ImportDeBenefMovCadastral</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.402" endtime="20260907 03:59:26.403"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '16'</arg>
+<arg>Instanciar Variaveis IntegMovInclusaoCRM</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.403" endtime="20260907 03:59:26.404"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '17'</arg>
+<arg>Instanciar Variaveis MovCadTranferenciaDeGrupoFamiliarEmMassaCRM</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.404" endtime="20260907 03:59:26.405"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '18'</arg>
+<arg>Instanciar Variaveis MovCadExclusaodeBeneficiariosEmMassaCRM</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.405" endtime="20260907 03:59:26.405"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '19'</arg>
+<arg>Instanciar Variaveis PortabilidadeCRM</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20260907 03:59:26.406" endtime="20260907 03:59:26.406"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${arg1}' == '20'</arg>
+<arg>Instanciar Variaveis ServicoVendasAPI</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>

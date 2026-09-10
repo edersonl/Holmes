@@ -1,0 +1,21 @@
+{
+  "titulo": "test",
+  "arquivo": "F:\\Info\\CRM\\Qualidade\\Sherlock\\UnimedPR_CRM\\unimedprcrm-master\\playwright\\tests\\test-1.spec.ts",
+  "status": "passed",
+  "duracaoMs": 223,
+  "erro": null,
+  "passos": [
+    {
+      "titulo": "Before Hooks",
+      "duracaoMs": 138,
+      "categoria": "hook"
+    },
+    {
+      "titulo": "After Hooks",
+      "duracaoMs": 126,
+      "categoria": "hook"
+    }
+  ],
+  "anexos": [],
+  "timestamp": "2026-09-07T06:58:39.444Z"
+}
