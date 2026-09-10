@@ -1,5 +1,9 @@
 import { defineConfig } from '@playwright/test';
 
+const { getAmbiente } = require('./playwright/ambientes');
+const ambiente = getAmbiente();
+process.env.CRM_URL = ambiente.baseUrl;
+
 export default defineConfig({
   testDir: './playwright/tests',
   timeout: Number(process.env.E2E_TIMEOUT ?? 60_000),
@@ -12,7 +16,7 @@ export default defineConfig({
     ['./crm-unimed/.holmes/reporters/evidencia-reporter.js', { outputDir: 'crm-unimed/.holmes/data/evidencias' }],
   ],
   use: {
-    baseURL: process.env.CRM_URL,
+    baseURL: ambiente.baseUrl,
     browserName: 'chromium',
     headless: process.env.HEADLESS !== 'false',
     screenshot: 'only-on-failure',
