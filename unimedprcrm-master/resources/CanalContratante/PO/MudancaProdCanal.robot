@@ -30,7 +30,7 @@ ${MENU_MOVIMENTACAO_CADASTRAL} =  xpath://*[@id="tab4"]/em[contains(., 'Moviment
 
 **Keywords***
 Selecionou no campo "Funções Permitidas" a opção "Mudança de Produto"
-    Wait Until Page Contains  Usuários Canal do Contratante » prime1  timeout=${TIMEOUT}
+    Wait Until Page Contains  Usuários Canal do Contratante » kautomatico  timeout=${TIMEOUT}
     Mouse Up    ${EDIT_BUTTON}
     Set Focus To Element  ${EDIT_BUTTON}
     Click Element    ${EDIT_BUTTON}

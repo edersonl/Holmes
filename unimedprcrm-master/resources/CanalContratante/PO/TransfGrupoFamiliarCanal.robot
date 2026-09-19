@@ -52,7 +52,7 @@ ${BUTTON_SEARCH} =  xpath://*[@id="form-contrato"]/div/div[3]/input[1]
 
 *** Keywords ***
 Selecionou no campo "Funções Permitidas" a opção "Transferência de Grupo Familiar"
-    Wait Until Page Contains  Usuários Canal do Contratante » prime1  timeout=${TIMEOUT}
+    Wait Until Page Contains  Usuários Canal do Contratante » kautomatico  timeout=${TIMEOUT}
     Mouse Up    ${EDIT_BUTTON}
     Set Focus To Element  ${EDIT_BUTTON}
     Click Element    ${EDIT_BUTTON}

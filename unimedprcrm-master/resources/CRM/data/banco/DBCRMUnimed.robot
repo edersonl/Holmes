@@ -11,8 +11,8 @@ Library    DebugLibrary
 @{LIST_COD_PLN_ASSIST}
 ${size_list}=   0
 ${DB_NAME}=    neg116        # qualidade 116
-${DB_USER}=    federa
-${DB_PASS}=    unimed187    # O NUMERO FINAL É O NUMMERO DA BASE SELECIONADA
+${DB_USER}=    root
+${DB_PASS}=    Crm975
 
 # base QA PLSQL:
 ${DB_CONNECT_STRING} =    '${DB_USER}/${DB_PASS}@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP) (Host = 192.168.1.100) (Port=10110))) (CONNECT_DATA=(SID=prod187)))'

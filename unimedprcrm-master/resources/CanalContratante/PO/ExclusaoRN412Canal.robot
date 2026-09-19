@@ -39,7 +39,7 @@ ${BUTTON_SAVE_MODAL} =  xpath://button[contains(.,'Salvar')]
 
 **Keywords***
 Selecionou no campo "Funções Permitidas" a opção "Exclusão de Beneficiário RN412"
-    Wait Until Page Contains  Usuários Canal do Contratante » prime1  timeout=${TIMEOUT}
+    Wait Until Page Contains  Usuários Canal do Contratante » kautomatico  timeout=${TIMEOUT}
     Mouse Up    ${EDIT_BUTTON}
     Set Focus To Element  ${EDIT_BUTTON}
     Click Element    ${EDIT_BUTTON}

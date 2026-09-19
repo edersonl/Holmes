@@ -7962,7 +7962,7 @@ Validar que coluna "Data Base Carência" foi preenchido
 
 
 Ativou os agendadores "Conferência - Realizar conferência automática" e "Solicitação de Integração Automática"
-    Wait Until Page Contains   Usuários Canal do Contratante » prime1   timeout=${TIMEOUT}
+    Wait Until Page Contains   Usuários Canal do Contratante » kautomatico   timeout=${TIMEOUT}
     Mouse Over  id:usermenu
     Sleep       3s
     Click Element    xpath://div[@id='globalLinks']//ul/li[2]
