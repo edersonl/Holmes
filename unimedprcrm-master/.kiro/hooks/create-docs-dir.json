@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Create docs directory",
+      "trigger": "SessionStart",
+      "description": "Creating docs directory in .holmes folder",
+      "action": {
+        "type": "command",
+        "command": "mkdir \"f:\\Info\\CRM\\Qualidade\\Sherlock\\UnimedPR_CRM\\unimedprcrm-master\\.holmes\\docs\" -ErrorAction SilentlyContinue"
+      }
+    }
+  ]
+}
