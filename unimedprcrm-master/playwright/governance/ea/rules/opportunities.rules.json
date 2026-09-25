@@ -1,0 +1,23 @@
+[
+  {
+    "id": "OPO_RN001",
+    "modulo": "Opportunities",
+    "nome": "Validar Área de Atuação",
+    "origem": "saude_PARAM_COMERCIALIZACAO",
+    "criticidade": "ALTO"
+  },
+  {
+    "id": "OPO_RN002",
+    "modulo": "Opportunities",
+    "nome": "Bloquear Natureza Jurídica Restrita",
+    "origem": "saude_PARAM_COMERCIALIZACAO",
+    "criticidade": "CRITICO"
+  },
+  {
+    "id": "OPO_RN003",
+    "modulo": "Opportunities",
+    "nome": "Bloquear CNAE Restrito",
+    "origem": "saude_PARAM_COMERCIALIZACAO",
+    "criticidade": "CRITICO"
+  }
+]

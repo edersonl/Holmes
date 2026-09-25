@@ -1,0 +1,11 @@
+{
+  "casoTeste": "TR022",
+  "funcionalidade": "Criar Oportunidade",
+  "modulo": "CRM",
+  "origem": "Enterprise Architect",
+  "regras": [
+    "OPO_RN001",
+    "OPO_RN002",
+    "OPO_RN003"
+  ]
+}

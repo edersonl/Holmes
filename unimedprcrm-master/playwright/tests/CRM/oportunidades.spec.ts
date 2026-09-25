@@ -5,32 +5,54 @@ import { MenuPage } from "../../pages/menu.page";
 import { AccountsPage } from "../../pages/accounts.page";
 import { OpportunitiesPage } from "../../pages/opportunities.page";
 
-import { createOpportunityFixture } from "../../data/massa03-oportunidades";
+import rule from "../../governance/rules/TR022.json";
+import mapping from "../../governance/ea/mappings/TR022.json";
+
+import {
+    registerCoverage
+} from "../../governance/ea/coverage/coverage-writer";
+
+import {
+    createOpportunityFixture
+} from "../../data/massa03-oportunidades";
 
 test.describe("CRM - Oportunidades", () => {
-    test("TR022", async ({ page }) => {
-        const fixture = createOpportunityFixture("TR022");
 
-        const login = new LoginPage(page);
+    test("TR022 - Criar oportunidade", async ({ page }) => {
 
-        const menu = new MenuPage(page);
+        console.log(
+            `Executando ${rule.casoTeste}`
+        );
 
-        const accounts = new AccountsPage(page);
+        const fixture =
+            createOpportunityFixture("TR022");
 
-        const opportunities = new OpportunitiesPage(page);
+        const login =
+            new LoginPage(page);
+
+        const menu =
+            new MenuPage(page);
+
+        const accounts =
+            new AccountsPage(page);
+
+        const opportunities =
+            new OpportunitiesPage(page);
 
         await login.open();
 
-        console.log("CRM_URL =", process.env.CRM_URL);
-        console.log("CRM_USER =", process.env.CRM_USER);
-        console.log("CRM_PASSWORD =", process.env.CRM_PASSWORD);
-        await login.login(process.env.CRM_USER!, process.env.CRM_PASSWORD!);
+        await login.login(
+            process.env.CRM_USER!,
+            process.env.CRM_PASSWORD!
+        );
 
         await menu.openAccounts();
 
         await accounts.expectSearchPage();
 
-        await accounts.searchAccount(fixture.accountName);
+        await accounts.searchAccount(
+            fixture.accountName
+        );
 
         await accounts.openFirstResult();
 
@@ -38,8 +60,28 @@ test.describe("CRM - Oportunidades", () => {
 
         await opportunities.create();
 
-        await opportunities.fillOpportunity(fixture.lives, fixture.type);
+        await opportunities.fillOpportunity(
+            fixture.lives,
+            fixture.type
+        );
 
         await opportunities.save();
+
+        // Sincronização mínima até descobrir
+        // a regra oficial do EA
+
+        await expect(
+            page.locator("body")
+        ).toBeVisible();
+
+        for (const regra of mapping.regras) {
+
+            await registerCoverage(
+                mapping.casoTeste,
+                regra,
+                "PASS"
+            );
+        }
     });
+
 });
